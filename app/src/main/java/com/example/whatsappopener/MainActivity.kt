@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         var num : String = "0";
         if(intent.action == Intent.ACTION_PROCESS_TEXT) {
             num = intent.getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT).toString()
+
             if (num.isDigitsOnly()) {
                 startWhatsapp(num)
             } else {
